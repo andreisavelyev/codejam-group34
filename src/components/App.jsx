@@ -4,9 +4,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import '../css/App.css';
 
 import Header from './Header';
-import Home from './Home';
-import PhotographerList from './PhotographerList';
-import PhotographerInfo from './PhotographerInfo';
+// import Home from './Home';
+// import PhotographerList from './PhotographerList';
+// import PhotographerInfo from './PhotographerInfo';
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
         <Header />
         <main className='main'>
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/photographers' component={PhotographerList} />
-            <Route path='/photographers/:photographer' component={PhotographerInfo} />
+            {/* <Route exact path='/' component={Home} /> */}
+            {/* <Route exact path='/photographers' component={PhotographerList} /> */}
+            {/* <Route path='/photographers/:photographer' component={PhotographerInfo} /> */}
           </Switch>
         </main>
       </div>
