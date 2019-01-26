@@ -25,7 +25,8 @@
       "linebreak-style": [
         "error",
         "windows"
-      ]
+      ],
+      "jsx-quotes": ["error", "prefer-single"]
     }
   },
   "browserslist": [
