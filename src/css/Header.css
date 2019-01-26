@@ -1,0 +1,36 @@
+.header {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 55px;
+	border-bottom: 1px solid rgb(46, 47, 48);
+	padding: 0 50px;
+}
+
+.header-logo {
+	font: 400 20px 'Georgia', 'Arial', 'Helvetica', sans-serif;
+	color: rgb(0, 0, 0);	
+}
+
+.header-nav {
+	width: 500px;
+	display: inline-flex;
+	justify-content: space-around;
+}
+
+.header-nav-tab {
+	font: 400 20px 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+	transition: text-shadow 0.5s linear;
+}
+
+.nav--active {
+	color: rgb(199, 37, 37);
+}
+
+.header-nav-tab:hover {
+	text-shadow: 0 0 10px rgb(143, 143, 143);
+	border-bottom: 1px solid rgb(143, 143, 143);
+}
