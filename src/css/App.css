@@ -1,0 +1,6 @@
+.logo {
+  margin-top: 200px;
+  font: 700 25px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  display: flex;
+  justify-content: center;
+}
