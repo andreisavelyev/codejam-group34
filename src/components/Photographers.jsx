@@ -28,7 +28,7 @@ class Photographers extends Reflux.Component {
       return (
         <section>
           { photographersListAll.map((item, index) => (
-            <Link to={`/photographers/key${index * 3}`}>
+            <Link to={`/photographers/id${index}`}>
               { item[keys[index]][language].name }
             </Link>
           )) }
