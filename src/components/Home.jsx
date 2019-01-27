@@ -8,11 +8,10 @@ class Home extends Reflux.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: 'bel',
       dayOfWeek: new Date().getDay(),
     };
     this.store = Store;
-    this.storeKeys = ['photographersListAll', 'isLoaded', 'keys'];
+    this.storeKeys = ['photographersListAll', 'isLoaded', 'keys', 'language'];
   }
 
   componentDidMount() {

@@ -9,6 +9,7 @@ class Store extends Reflux.Store {
       photographersListAll: [],
       isLoaded: '',
       keys: [],
+      language: 'bel',
     };
     this.listenables = actions;
   }
@@ -18,9 +19,15 @@ class Store extends Reflux.Store {
       .then(res => res.json())
       .then((data) => {
         const keys = data.map(Object.keys).flat();
-        console.log(keys)
         this.setState({ photographersListAll: data, keys, isLoaded: true });
       });
+  }
+
+  onChangeLanguage(e) {
+    console.log('clicked')
+    this.setState({
+      language: e.target.textContent,
+    });
   }
 }
 
