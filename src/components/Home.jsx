@@ -1,7 +1,9 @@
 import React from 'react';
 import Reflux from 'reflux';
-import actions from '../actions';
 import Store from '../Store';
+
+import actions from '../actions';
+import '../css/Home.css';
 import Photographer from './Photographer';
 
 class Home extends Reflux.Component {
@@ -19,12 +21,14 @@ class Home extends Reflux.Component {
   }
 
   render() {
-    const { keys, isLoaded, photographersListAll, language, dayOfWeek } = this.state;
+    const {
+      keys, isLoaded, photographersListAll, language, dayOfWeek,
+    } = this.state;
     if (!isLoaded) {
-      return <h2>Loading</h2>
+      return <h2>Loading</h2>;
     }
     const info = photographersListAll[dayOfWeek][keys[dayOfWeek]][language];
-    const media = photographersListAll[dayOfWeek][keys[dayOfWeek]]
+    const media = photographersListAll[dayOfWeek][keys[dayOfWeek]];
     return (
       <Photographer language={language} info={info} media={media} />
     );
