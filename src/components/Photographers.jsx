@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Reflux from 'reflux';
 import actions from '../actions';
 import Store from '../Store';
@@ -10,7 +11,7 @@ class Photographers extends Reflux.Component {
     this.state = {
       photographer: [],
     };
-    
+
     this.store = Store;
     this.storeKeys = ['photographersListAll', 'isLoaded', 'keys', 'language'];
   }
@@ -20,19 +21,23 @@ class Photographers extends Reflux.Component {
   }
 
   render() {
-    const { photographersListAll, isLoaded, keys, language } = this.state;
+    const {
+      photographersListAll, isLoaded, keys, language,
+    } = this.state;
     if (isLoaded) {
       return (
         <section>
-          { photographersListAll.map((item, index) =>
-            <p key={`key${index * 3}`}> { item[keys[index]][language]['name'] } </p>
-          ) }
+          { photographersListAll.map((item, index) => (
+            <Link to={`/photographers/key${index * 3}`}>
+              { item[keys[index]][language].name }
+            </Link>
+          )) }
         </section>
-      )
+      );
     }
     return (
       <p>loading...</p>
-    )
+    );
   }
 }
 
