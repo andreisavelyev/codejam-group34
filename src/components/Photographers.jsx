@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Reflux from 'reflux';
 import actions from '../actions';
 import Store from '../Store';
+import PhotographerInfo from './PhotographerInfo';
 
 class Photographers extends Reflux.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class Photographers extends Reflux.Component {
       return (
         <section>
           { photographersListAll.map((item, index) => (
-            <Link to={`/photographers/id${index}`}>
+            <Link to={`/photographers/${index}`} key={`link${index}`}>
               { item[keys[index]][language].name }
             </Link>
           )) }

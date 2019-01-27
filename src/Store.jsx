@@ -23,6 +23,15 @@ class Store extends Reflux.Store {
       });
   }
 
+  onGetDataFromRouter() {
+    fetch('../data.json')
+      .then(res => res.json())
+      .then((data) => {
+        const keys = data.map(Object.keys).flat();
+        this.setState({ photographersListAll: data, keys, isLoaded: true });
+      });
+  }
+
   onChangeLanguage(e) {
     console.log('clicked')
     this.setState({

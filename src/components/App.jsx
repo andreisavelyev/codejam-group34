@@ -8,7 +8,7 @@ import '../css/App.css';
 import Header from './Header';
 import Home from './Home';
 import PhotographerList from './PhotographerList';
-// import PhotographerInfo from './PhotographerInfo';
+import PhotographerInfo from './PhotographerInfo';
 
 class App extends Reflux.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class App extends Reflux.Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/photographers' component={PhotographerList} />
-              {/* <Route path='/photographers/:photographer' component={PhotographerInfo} /> */}
+              <Route path='/photographers/:photographer' component={PhotographerInfo} />
             </Switch>
           </main>
         </div>
