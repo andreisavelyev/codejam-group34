@@ -26,7 +26,10 @@
         "error",
         "windows"
       ],
-      "jsx-quotes": ["error", "prefer-single"]
+      "jsx-quotes": [
+        "error",
+        "prefer-single"
+      ]
     }
   },
   "browserslist": [
@@ -34,5 +37,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreisavelyev/codejam-group34.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreisavelyev/codejam-group34/issues"
+  },
+  "homepage": "https://github.com/andreisavelyev/codejam-group34#readme"
 }
