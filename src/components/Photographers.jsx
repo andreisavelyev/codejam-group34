@@ -1,9 +1,9 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Reflux from 'reflux';
 import actions from '../actions';
 import Store from '../Store';
-import PhotographerInfo from './PhotographerInfo';
 
 class Photographers extends Reflux.Component {
   constructor(props) {

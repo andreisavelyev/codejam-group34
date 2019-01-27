@@ -1,0 +1,64 @@
+.titleName {
+  font: 700 25px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.homeAboutSite {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.homeAbout {
+  width: 40%;
+  margin: 0 5px;
+}
+
+.homeFotogDay {
+  width: 60%;
+  margin: 0 5px;
+}
+
+.ph-name {
+  font: 500 20px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.ph-img {
+  display:block;
+  margin:auto;
+  width: 250px;
+  padding-bottom: 15px;
+}
+
+.descriptionSite {
+  font: 500 16px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  text-indent: 15px;
+  padding-bottom: 5px;
+}
+
+.ph-info {
+  font: 700 15px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+}
+
+.projectTeam {
+  display: flex;
+  justify-content: center;
+}
+
+.projectUser {
+  width: 200px;
+  margin: 0 5px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1)
+}
+
+.projectUser:hover {
+	box-shadow: 0px 15px 22px 9px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s linear;
+}
+
+.projectUserAvatar {
+  width: 200px;
+  cursor: pointer;
+}
