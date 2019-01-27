@@ -32,5 +32,24 @@
 
 .header-nav-tab:hover {
 	text-shadow: 0 0 10px rgb(143, 143, 143);
-	border-bottom: 1px solid rgb(143, 143, 143);
+	/* border-bottom: 1px solid rgb(143, 143, 143); */
+}
+
+.btnOnChangeLanguage {
+	font: 400 18px 'Georgia', 'Arial', 'Helvetica', sans-serif;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	width: 80px;
+	height: 40px;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	margin: 0 1px;
+	transition: text-shadow 0.5s linear;
+}
+
+.btnOnChangeLanguage:hover {
+	color: rgb(199, 37, 37);
+	text-shadow: 0 0 10px rgb(143, 143, 143);
 }
