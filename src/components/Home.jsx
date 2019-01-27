@@ -3,6 +3,7 @@ import Reflux from 'reflux';
 import actions from '../actions';
 import Store from '../Store';
 import Photographer from './Photographer';
+import Photographers from './Photographers';
 
 class Home extends Reflux.Component {
   constructor(props) {
