@@ -2,33 +2,33 @@
 import React from 'react';
 
 import '../css/Home.css';
-import PhotographerVideo from './Video';
+import PhotographerVideo from './PhotographerVideo';
 
 const translatedPoints = {
   bel: {
-    dateOfBirth: 'Дата нараджэння:',
-    placeOfBirth: 'Месца нараджэння:',
-    dateOfDeath: 'Дата смерці:',
-    almaMater: 'Альма-матар:',
-    typeOfActivity: 'Род дзейнасці:',
-    Biography: 'Біяграфія:',
+    dateOfBirth: 'Дата нараджэння: ',
+    placeOfBirth: 'Месца нараджэння: ',
+    dateOfDeath: 'Дата смерці: ',
+    almaMater: 'Альма-матар: ',
+    typeOfActivity: 'Род дзейнасці: ',
+    biography: 'Біяграфія: ',
   },
   eng: {
-    dateOfBirth: 'Born:',
-    placeOfBirth: 'Place of Birth:',
-    dateOfDeath: 'Died:',
-    almaMater: 'Alma-mater:',
-    typeOfActivity: 'Occupation:',
-    Biography: 'Biography:',
+    dateOfBirth: 'Born: ',
+    placeOfBirth: 'Place of Birth: ',
+    dateOfDeath: 'Died: ',
+    almaMater: 'Alma-mater: ',
+    typeOfActivity: 'Occupation: ',
+    biography: 'Biography: ',
   },
   rus: {
-    dateOfBirth: 'Дата рождения:',
-    placeOfBirth: 'Место рождения:',
-    dateOfDeath: 'Дата смерти:',
-    almaMater: 'Альма-матер:',
-    typeOfActivity: 'Род деятельности:',
-    Biography: 'Биография:',
-  }
+    dateOfBirth: 'Дата рождения: ',
+    placeOfBirth: 'Место рождения: ',
+    dateOfDeath: 'Дата смерти: ',
+    almaMater: 'Альма-матер: ',
+    typeOfActivity: 'Род деятельности: ',
+    biography: 'Биография: ',
+  },
 };
 
 function Photographer(props) {
@@ -66,8 +66,8 @@ function Photographer(props) {
         </span>
         {props.info.typeOfActivity}
       </p>
-      <h2 className='ph-info'>{ translatedPoints[props.language].Biography }</h2>
-      <p>{props.info.Biography}</p>
+      <h2 className='ph-info'>{ translatedPoints[props.language].biography }</h2>
+      <p>{props.info.biography}</p>
       <PhotographerVideo video={props.media.video} />
     </React.Fragment>
   );
