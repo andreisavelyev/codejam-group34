@@ -48,7 +48,7 @@ class Home extends Reflux.Component {
           </section>
           <section className='homeFotogDay'>
             <h2 className='titleFotogDay titleName'>{photographerOfDay}</h2>
-            <Photographer language={language} info={info} media={media} />
+            <Photographer day={dayOfWeek} language={language} info={info} media={media} />
           </section>
         </div>
         <div>

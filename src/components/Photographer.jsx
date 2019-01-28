@@ -3,6 +3,7 @@ import React from 'react';
 
 import '../css/Home.css';
 import PhotographerVideo from './PhotographerVideo';
+import PhotographerMap from './PhotographerMap';
 
 const translatedPoints = {
   bel: {
@@ -30,6 +31,11 @@ const translatedPoints = {
     biography: 'Биография: ',
   },
 };
+
+const coordinates =  {
+  "lat": 54.7818,
+  "lng": 32.0401
+}
 
 function Photographer(props) {
   return (
@@ -68,7 +74,8 @@ function Photographer(props) {
       </p>
       <h2 className='ph-info'>{ translatedPoints[props.language].biography }</h2>
       <p>{props.info.biography}</p>
-      <PhotographerVideo video={props.media.video} />
+      {!props.day && <PhotographerVideo video={props.media.video} />}
+      <PhotographerMap city='Minsk' coordinates={coordinates} />
     </React.Fragment>
   );
 }

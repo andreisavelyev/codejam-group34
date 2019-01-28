@@ -1,6 +1,5 @@
 import React from 'react';
 import Reflux from 'reflux';
-import actions from '../actions';
 import Store from '../Store';
 import Photographers from './Photographers';
 import Searchbar from './Searchbar';
