@@ -10,6 +10,8 @@ class Store extends Reflux.Store {
       isLoaded: '',
       keys: [],
       language: 'bel',
+      searchedPhotoghrapher: '',
+      input: '',
     };
     this.listenables = actions;
   }
@@ -33,9 +35,28 @@ class Store extends Reflux.Store {
   }
 
   onChangeLanguage(e) {
-    console.log('clicked')
     this.setState({
       language: e.target.textContent,
+    });
+  }
+
+  onChangeInput(e) {
+    this.setState({
+      input: e.target.value,
+    });
+  }
+
+  onHandleSubmit(e) {
+    e.preventDefault();
+    const { input, photographersListAll } = this.state;
+    photographersListAll.map((item) => {
+      const key = Object.keys(item).toString();
+      if (key.includes(input)) {
+        this.setState({
+          searchedPhotoghrapher: item[key],
+        });
+      }
+      return false;
     });
   }
 }

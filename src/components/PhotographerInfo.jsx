@@ -26,7 +26,6 @@ class PhotographerInfo extends Reflux.Component {
     } = this.state;
 
     if (isLoaded) {
-      // console.log(this.props.match.params.photographer);
       const id = this.props.match.params.photographer;
       const info = photographersListAll[id][keys[id]][language];
       const media = photographersListAll[id][keys[id]];

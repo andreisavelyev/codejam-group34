@@ -7,7 +7,6 @@ import Store from '../Store';
 import actions from '../actions';
 import '../css/Home.css';
 import Photographer from './Photographer';
-
 import avatarSburnt from '../img/avatorSerg.jpg';
 import avatorAndr from '../img/avatorAndr.jpg';
 import avatorIlyay from '../img/avatorIlyay.png';
