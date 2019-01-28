@@ -1,0 +1,66 @@
+.wrapperPhotographerList {
+  margin: 0 auto;
+  width: 800px;
+}
+.itemFotogr{
+  display: flex;
+  border: solid 1px rgb(172, 172, 172);
+  margin-bottom: 10px;
+}
+
+.imgPhotographerListBlock {
+  width: 300px;
+}
+
+.imgPhotographerList {
+  display:block;
+  margin:auto;
+  height: 150px;
+}
+
+.namePhotographerList {
+  font: 700 20px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  color: rgb(0, 0, 0);
+  padding-bottom: 15px;
+  text-decoration: none;
+}
+
+.typeOfActivityPhotographerList {
+  font: 500 15px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+}
+
+.formSearchForogr {
+  margin: 0 auto;
+  width: 800px;
+  margin-bottom: 20px;
+}
+
+.inputSearchForogr[placeholder] {
+  font: 500 18px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  color: rgb(0, 0, 0);
+  text-overflow: ellipsis;
+  padding-left: 28px;
+  padding-bottom: 2px;
+}
+
+.inputSearchForogr {
+  width: 250px;
+  height: 30px;
+  border-top: 1px solid rgb(124, 124, 124);
+  border-left: 1px solid rgb(124, 124, 124);
+  border-bottom: 1px solid rgb(124, 124, 124);
+  border-right: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.btnSearchForogr {
+  font: 500 18px/1.2 'Georgia', 'Arial', 'Helvetica', sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: rgb(233, 196, 179);
+  text-transform: uppercase;
+  width: 152px;
+  height: 30px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
