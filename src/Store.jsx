@@ -12,6 +12,8 @@ class Store extends Reflux.Store {
       language: 'bel',
       searchedPhotoghrapher: '',
       input: '',
+      homeTranslations: [],
+      homeIsLoaded: '',
     };
     this.listenables = actions;
   }
@@ -51,13 +53,21 @@ class Store extends Reflux.Store {
     const { input, photographersListAll } = this.state;
     photographersListAll.map((item) => {
       const key = Object.keys(item).toString();
-      if (key.includes(input)) {
+      if (key.includes(input.toLowerCase())) {
         this.setState({
           searchedPhotoghrapher: item[key],
         });
       }
       return false;
     });
+  }
+
+  onGetTranslations() {
+    fetch('home-data.json')
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ homeTranslations: data, homeIsLoaded: true });
+      });
   }
 }
 
