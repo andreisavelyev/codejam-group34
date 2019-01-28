@@ -33,7 +33,7 @@ class PhotographerInfo extends Reflux.Component {
         <Photographer language={language} info={info} media={media} />
       );
     }
-    return <p>Loading</p>  
+    return <p>Loading</p>;
   }
 }
 
