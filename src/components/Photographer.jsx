@@ -2,94 +2,73 @@
 import React from 'react';
 
 import '../css/Home.css';
+import PhotographerVideo from './PhotographerVideo';
+
+const translatedPoints = {
+  bel: {
+    dateOfBirth: 'Дата нараджэння: ',
+    placeOfBirth: 'Месца нараджэння: ',
+    dateOfDeath: 'Дата смерці: ',
+    almaMater: 'Альма-матар: ',
+    typeOfActivity: 'Род дзейнасці: ',
+    biography: 'Біяграфія: ',
+  },
+  eng: {
+    dateOfBirth: 'Born: ',
+    placeOfBirth: 'Place of Birth: ',
+    dateOfDeath: 'Died: ',
+    almaMater: 'Alma-mater: ',
+    typeOfActivity: 'Occupation: ',
+    biography: 'Biography: ',
+  },
+  rus: {
+    dateOfBirth: 'Дата рождения: ',
+    placeOfBirth: 'Место рождения: ',
+    dateOfDeath: 'Дата смерти: ',
+    almaMater: 'Альма-матер: ',
+    typeOfActivity: 'Род деятельности: ',
+    biography: 'Биография: ',
+  },
+};
 
 function Photographer(props) {
-  // const info = Object.keys(props.info).filter(item => item !== 'Biography' && item !== 'name');
-  if (props.language === 'bel') {
-    return (
-      <React.Fragment>
-        <h2 className='ph-name'>{ props.info.name }</h2>
-        <img className='ph-img' src={props.media.photo} alt='Foto Photographer' />
-        <p>
-          <span className='ph-info'>Дата нараджэння: </span>
-          {props.info.dateOfBirth}
-        </p>
-        <p>
-          <span className='ph-info'>Месца нараджэння: </span>
-          {props.info.placeOfBirth}
-        </p>
-        <p>
-          <span className='ph-info'>Дата смерці: </span>
-          {props.info.dateOfDeath}
-        </p>
-        <p>
-          <span className='ph-info'>Альма-матар: </span>
-          {props.info.almaMater}
-        </p>
-        <p>
-          <span className='ph-info'>Род дзейнасці: </span>
-          {props.info.typeOfActivity}
-        </p>
-        <h2 className='ph-info'>Біяграфія:</h2>
-        <p>{props.info.Biography}</p>
-      </React.Fragment>
-    );
-  } if (props.language === 'eng') {
-    return (
-      <React.Fragment>
-        <h2 className='ph-name'>{ props.info.name }</h2>
-        <img className='ph-img' src={props.media.photo} alt='Foto Photographer' />
-        <p>
-          <span className='ph-info'>Born: </span>
-          {props.info.dateOfBirth}
-        </p>
-        <p>
-          <span className='ph-info'>Place of Birth: </span>
-          {props.info.placeOfBirth}
-        </p>
-        <p>
-          <span className='ph-info'>Died: </span>
-          {props.info.dateOfDeath}
-        </p>
-        <p>
-          <span className='ph-info'>Alma-mater: </span>
-          {props.info.almaMater}
-        </p>
-        <p>
-          <span className='ph-info'>Occupation: </span>
-          {props.info.typeOfActivity}
-        </p>
-        <h2 className='ph-info'>Biography:</h2>
-        <p>{props.info.Biography}</p>
-      </React.Fragment>
-    );
-  }
   return (
     <React.Fragment>
       <h2 className='ph-name'>{ props.info.name }</h2>
       <img className='ph-img' src={props.media.photo} alt='Foto Photographer' />
       <p>
-        <span className='ph-info'>Дата рождения: </span>
+        <span className='ph-info'>
+          { translatedPoints[props.language].dateOfBirth }
+        </span>
         {props.info.dateOfBirth}
       </p>
       <p>
-        <span className='ph-info'>Место рождения: </span>
+        <span className='ph-info'>
+          { translatedPoints[props.language].placeOfBirth }
+        </span>
         {props.info.placeOfBirth}
       </p>
       <p>
-        <span className='ph-info'>Дата смерти: </span>
+        <span className='ph-info'>
+          { translatedPoints[props.language].dateOfDeath }
+        </span>
         {props.info.dateOfDeath}
       </p>
       <p>
-        <span className='ph-info'>Альма-матер: </span>
+        <span className='ph-info'>
+          { translatedPoints[props.language].almaMater }
+        </span>
         {props.info.almaMater}
       </p>
       <p>
-        <span className='ph-info'>Род деятельности: </span>
+        <span className='ph-info'>
+          { translatedPoints[props.language].typeOfActivity }
+        </span>
         {props.info.typeOfActivity}
       </p>
-      <h2 className='ph-info'>Биография:</h2>
-      <p>{props.info.Biography}</p>
+      <h2 className='ph-info'>{ translatedPoints[props.language].biography }</h2>
+      <p>{props.info.biography}</p>
+      <PhotographerVideo video={props.media.video} />
     </React.Fragment>
   );
 }
