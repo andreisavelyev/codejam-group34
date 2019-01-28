@@ -9,7 +9,7 @@ import '../css/Home.css';
 import Photographer from './Photographer';
 import avatarSburnt from '../img/avatorSerg.jpg';
 import avatorAndr from '../img/avatorAndr.jpg';
-import avatorIlyay from '../img/avatorIlyay.png';
+import avatorIlyay from '../img/avatorIlyay.jpg';
 
 class Home extends Reflux.Component {
   constructor(props) {
@@ -48,7 +48,7 @@ class Home extends Reflux.Component {
           </section>
           <section className='homeFotogDay'>
             <h2 className='titleFotogDay titleName'>{photographerOfDay}</h2>
-            <Photographer language={language} info={info} media={media} />
+            <Photographer day={dayOfWeek} language={language} info={info} media={media} />
           </section>
         </div>
         <div>

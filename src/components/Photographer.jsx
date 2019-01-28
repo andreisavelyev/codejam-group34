@@ -68,7 +68,7 @@ function Photographer(props) {
       </p>
       <h2 className='ph-info'>{ translatedPoints[props.language].biography }</h2>
       <p>{props.info.biography}</p>
-      <PhotographerVideo video={props.media.video} />
+      {!props.day && <PhotographerVideo video={props.media.video} />}
     </React.Fragment>
   );
 }

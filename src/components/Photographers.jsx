@@ -5,6 +5,8 @@ import Reflux from 'reflux';
 import actions from '../actions';
 import Store from '../Store';
 
+import '../css/PhotographerList.css';
+
 class Photographers extends Reflux.Component {
   constructor(props) {
     super(props);
@@ -25,15 +27,32 @@ class Photographers extends Reflux.Component {
     const {
       photographersListAll, isLoaded, keys, language,
     } = this.state;
+
+    console.log('props Photographers', photographersListAll);
+
     if (isLoaded) {
       return (
-        <section>
+        <div className='wrapperPhotographerList'>
           { photographersListAll.map((item, index) => (
-            <Link to={`/photographers/${index}`} key={`link${index}`}>
-              { item[keys[index]][language].name }
-            </Link>
+            <div className='itemFotogr'>
+              <div className='imgPhotographerListBlock'>
+                <img className='imgPhotographerList' src={item[keys[index]].photo} alt='foto' />
+              </div>
+              <div>
+                <div className='namePhotographerList'>
+                  <Link to={`/photographers/${index}`} key={`link${index}`}>
+                    { item[keys[index]][language].name }
+                  </Link>
+                </div>
+                <div>
+                  <p className='typeOfActivityPhotographerList'>
+                    {item[keys[index]][language].typeOfActivity}
+                  </p>
+                </div>
+              </div>
+            </div>
           )) }
-        </section>
+        </div>
       );
     }
     return (
