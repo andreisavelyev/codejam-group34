@@ -18,7 +18,6 @@ class App extends Reflux.Component {
   }
 
   render() {
-    // console.log(actions.changeLanguage)
     return (
       <BrowserRouter>
         <div>

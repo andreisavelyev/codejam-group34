@@ -5,7 +5,6 @@ import Store from '../Store';
 import actions from '../actions';
 import '../css/Home.css';
 import Photographer from './Photographer';
-import Photographers from './Photographers';
 
 class Home extends Reflux.Component {
   constructor(props) {
