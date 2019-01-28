@@ -18,43 +18,41 @@ class Home extends Reflux.Component {
       dayOfWeek: new Date().getDay(),
     };
     this.store = Store;
-    this.storeKeys = ['photographersListAll', 'isLoaded', 'keys', 'language'];
+    this.storeKeys = ['photographersListAll', 'isLoaded', 'keys', 'language', 'homeTranslations', 'homeIsLoaded'];
   }
 
   componentDidMount() {
     actions.getData();
+    actions.getTranslations();
   }
 
   render() {
     const {
-      keys, isLoaded, photographersListAll, language, dayOfWeek,
+      keys, isLoaded, photographersListAll, language, dayOfWeek, homeTranslations, homeIsLoaded,
     } = this.state;
-    if (!isLoaded) {
+    if (!isLoaded || !homeIsLoaded) {
       return <h2>Loading</h2>;
     }
     const info = photographersListAll[dayOfWeek][keys[dayOfWeek]][language];
     const media = photographersListAll[dayOfWeek][keys[dayOfWeek]];
+    const description = homeTranslations[0][language];
+    const team = language === 'bel' ? 'Каманда праекта' : language === 'rus' ? 'Команда проекта' : 'Project team';
+    const photographerOfDay = language === 'bel' ? 'Фатограф дня' : language === 'rus' ? 'Фотограф дня' : 'Photographer of the day';
     return (
       <div className='wrapperHome'>
         <div className='homeAboutSite'>
           <section className='homeAbout'>
-            <h3 className='titleName'>Портал о лучших фотографах Беларуси</h3>
-            <p className='descriptionSite'>Любое мастерство требует развития, расширения кругозора и, зачастую, признания общественности. Искусство фотографии – не исключение.
-              Помимо занятий в фотошколе и собственного опыта, фотографу любого уровня следует обратить внимание на фотосайты для фотографов,
-              чтобы почерпнуть важную информацию, быть в курсе новинок сферы фотографии и, конечно, зарабатывать на своем ремесле.
-            </p>
-            <p className='descriptionSite'>Один из лучших способов понять стиль работы любого фотографа – изучить его блог. Это еще и очень интересно –
-              следить за развитием профессионализма и событиями в жизни человека. Сайты профессиональных фотографов и фотоблоги обычно содержат
-              фотоотчеты одного автора в хронологическом порядке и минимум текста, что объясняется привычкой фотографов говорить с миром на языке фото.
-            </p>
+            <h3 className='titleName'>{description.title}</h3>
+            <p className='descriptionSite'> {description.first} </p>
+            <p className='descriptionSite'>{description.second}</p>
           </section>
           <section className='homeFotogDay'>
-            <h2 className='titleFotogDay titleName'>Фотограф дня</h2>
+            <h2 className='titleFotogDay titleName'>{photographerOfDay}</h2>
             <Photographer language={language} info={info} media={media} />
           </section>
         </div>
         <div>
-          <h3 className='titleName'>Команда проекта</h3>
+          <h3 className='titleName'>{team}</h3>
           <div className='projectTeam'>
             <figure className='projectUser'>
               <a href='https://github.com/andreisavelyev' target='_blank' rel='noopener noreferrer'>

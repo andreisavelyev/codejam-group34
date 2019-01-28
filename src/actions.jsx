@@ -6,6 +6,7 @@ const actions = Reflux.createActions([
   'getDataFromRouter',
   'changeInput',
   'handleSubmit',
+  'getTranslations',
 ]);
 
 export default actions;
