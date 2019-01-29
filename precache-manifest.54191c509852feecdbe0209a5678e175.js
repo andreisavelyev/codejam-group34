@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/codejam-group34/static/js/runtime~main.47777b52.js"
   },
   {
-    "revision": "22539330ffd97f48d8bf",
-    "url": "/codejam-group34/static/js/main.22539330.chunk.js"
+    "revision": "5744b75967f6b52b9f24",
+    "url": "/codejam-group34/static/js/main.5744b759.chunk.js"
   },
   {
     "revision": "ba7912eacd1667ce3c61",
     "url": "/codejam-group34/static/js/1.ba7912ea.chunk.js"
   },
   {
-    "revision": "22539330ffd97f48d8bf",
+    "revision": "5744b75967f6b52b9f24",
     "url": "/codejam-group34/static/css/main.e65ca0ee.chunk.css"
   },
   {
-    "revision": "2b136df3511fb5038b615ffda550c299",
+    "revision": "52d2b6938d36498ab1d0d5dfea84ab22",
     "url": "/codejam-group34/index.html"
   }
 ];
