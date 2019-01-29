@@ -1,7 +1,7 @@
 {
   "main.css": "/codejam-group34/static/css/main.e65ca0ee.chunk.css",
-  "main.js": "/codejam-group34/static/js/main.5744b759.chunk.js",
-  "main.js.map": "/codejam-group34/static/js/main.5744b759.chunk.js.map",
+  "main.js": "/codejam-group34/static/js/main.7c11ba48.chunk.js",
+  "main.js.map": "/codejam-group34/static/js/main.7c11ba48.chunk.js.map",
   "static/js/1.ba7912ea.chunk.js": "/codejam-group34/static/js/1.ba7912ea.chunk.js",
   "static/js/1.ba7912ea.chunk.js.map": "/codejam-group34/static/js/1.ba7912ea.chunk.js.map",
   "runtime~main.js": "/codejam-group34/static/js/runtime~main.47777b52.js",
@@ -11,6 +11,6 @@
   "static/media/avatorIlyay.jpg": "/codejam-group34/static/media/avatorIlyay.98257a77.jpg",
   "static/media/avatorAndr.jpg": "/codejam-group34/static/media/avatorAndr.bc4e9dd0.jpg",
   "index.html": "/codejam-group34/index.html",
-  "precache-manifest.54191c509852feecdbe0209a5678e175.js": "/codejam-group34/precache-manifest.54191c509852feecdbe0209a5678e175.js",
+  "precache-manifest.ebdd8565f1b9d2c2b68c3d7096466aa2.js": "/codejam-group34/precache-manifest.ebdd8565f1b9d2c2b68c3d7096466aa2.js",
   "service-worker.js": "/codejam-group34/service-worker.js"
 }
